@@ -9,7 +9,7 @@ export const Form = () => {
 
 	const [message, setMessage] = useState("");
 
-	const handleSubmit = (event) => {
+	const submit = (event) => {
 		event.preventDefault();
 
 		setMessage(`Hej ${firstName} ${lastName}, dit telefonnummer er "${phoneNumber}"
@@ -17,7 +17,7 @@ export const Form = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={submit}>
 			<input
 				type="text"
 				id="firstName"
