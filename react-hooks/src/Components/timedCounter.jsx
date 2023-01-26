@@ -1,12 +1,14 @@
 import { useState } from "react";
+import { useEffect } from "react";
 
 export const TimedCounter = () => {
-	let [value, setValue] = useState(0);
-    
-	for (let i = value; i < 50; i++) {
+	let [count, setCounter] = useState(0);
+
+	useEffect(() => {
 		setTimeout(() => {
-			setValue(value + 1);
+			setCounter(count + 1);
 		}, 1000);
-	}
-	return <p>{value}</p>;
+	}, [count]);
+
+	return <div>{count}</div>;
 };
