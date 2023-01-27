@@ -1,16 +1,17 @@
 import "./App.css";
-import { Greeting } from "./Components/Greeting";
-import { Counter } from "./Components/Counter";
-import { Form } from "./Components/Form";
-import { TimedCounter } from "./Components/timedCounter";
+import { ApiCall } from "./Components/ApiCall";
+import { BrowserRouter } from "react-router-dom";
+import { AppRouter } from "./Components/appRouter/AppRouter";
+import { Header } from "./Components/Header";
 
 function App() {
 	return (
 		<div className="App">
-			{/* <Greeting />
-			<Counter />
-			<Form /> */}
-			<TimedCounter />
+			<BrowserRouter>
+				<Header />
+				<AppRouter />
+				<ApiCall />
+			</BrowserRouter>
 		</div>
 	);
 }
